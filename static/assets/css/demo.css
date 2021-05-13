@@ -1,0 +1,48 @@
+/* 1.样式的重置 */
+			ul{
+				list-style: none;
+				padding: 0;
+				margin: 0;
+			}
+			a{
+				text-decoration: none;
+				color: #0000cc;
+			}
+			/* 2.整体样式 */
+			/* 3.每一个li的样式 */
+			.page ul li{
+				display: inline-block;
+			}
+			.page ul li a{
+				display: inline-block;
+				width: 34px;
+				height:34px;
+				border:1px solid #e1e2e3;
+				font-size: 14px;
+				/* 居中 */
+				text-align: center;
+				line-height: 34px;
+				/* 间距 */
+				margin-right: 5px;
+			}
+			.page ul li a:hover{
+				border: 1px solid #38f;
+				background-color: #f2f8ff;
+			}
+			.page .prev a, .page .next a{
+				width: 88px;
+			}
+			/* 4.点击后的a效果 */
+			.page .active{
+				width: 36px;
+				height: 36px;
+				line-height: 36px;
+				border:none;
+				font-weight: 700;
+				color: #000;
+				/* cursor: initial; */
+			}
+			.page .active:hover{
+				border:none;
+				background-color: transparent;
+			}

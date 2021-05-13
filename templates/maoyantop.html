@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Mamba Bootstrap Template - Index</title>
+  <meta content="" name="descriptison">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="static/assets/img/favicon.png" rel="icon">
+  <link href="static/assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,600,600i,700,700i,900" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="static/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="static/assets/vendor/icofont/icofont.min.css" rel="stylesheet">
+  <link href="static/assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="static/assets/vendor/animate.css/animate.min.css" rel="stylesheet">
+  <link href="static/assets/vendor/venobox/venobox.css" rel="stylesheet">
+  <link href="static/assets/vendor/aos/aos.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="static/assets/css/style.css" rel="stylesheet">
+  <!-- pagesize css -->
+  <link rel="stylesheet" type="text/css" href="static/assets/css/demo.css">
+  <!-- =======================================================
+  * Template Name: Mamba - v2.0.1
+  * Template URL: https://bootstrapmade.com/mamba-one-page-bootstrap-template-free/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+    <script type="text/javascript"  src="static/assets/js/u_js.js"></script>
+</head>
+
+<body>
+<script src="http://pv.sohu.com/cityjson?ie=utf-8"></script>
+
+<!--<script type="text/javascript">-->
+<!--console.log(returnCitySN["cip"]+','+returnCitySN["cname"])-->
+<!--</script>-->
+<!--<script>-->
+<!--window.onload = function(){ ale(); }-->
+<!--</script>-->
+
+
+  <!-- ======= Header ======= -->
+  <header id="header">
+    <div class="container">
+
+      <div class="logo float-left">
+        <h1 class="text-light"><a href="index.html"><span>LUKE电影排行</span></a></h1>
+        <!-- Uncomment below if you prefer to use an image logo -->
+        <!-- <a href="index.html"><img src="static/assets/img/logo.png" alt="" class="img-fluid"></a>-->
+      </div>
+
+      <nav class="nav-menu float-right d-none d-lg-block">
+        <ul>
+          <li class="active"><a href="/header">首页</a></li>
+          <li><a href="/maoyantop">猫眼电影TOP100</a></li>
+          <li><a href="/doubantop">豆瓣电影TOP250</a></li>
+          <li><a href="/anx">分析</a></li>
+          <li><a href="/team">团队</a></li>
+
+          <li><a href="#contact">联系我们</a></li>
+        </ul>
+      </nav><!-- .nav-menu -->
+
+    </div>
+  </header><!-- End Header -->
+
+   <!-- ======= Our Team Section ======= -->
+    <section id="team" class="team">
+      <div class="container" style="max-width: 100%">
+
+        <div class="section-title">
+          <h2>猫眼电影Top100电影</h2>
+        </div>
+
+        <!-- ======= Counts Section ======= -->
+    <section  class="counts section-bg">
+      <div class="container" style="max-width: 100%">
+
+          <table class="table table-striped" >
+
+              <tr>
+                  <td nowrap="nowrap">排名</td>
+                  <td nowrap="nowrap">标题</td>
+                  <td nowrap="nowrap">链接</td>
+                  <td nowrap="nowrap">图片</td>
+                  <td nowrap="nowrap">评分</td>
+                  <td nowrap="nowrap">主演</td>
+                  <td nowrap="nowrap">上映时间</td>
+              </tr>
+
+              {% for movie in movies %}
+              <tr >
+                  <td nowrap="nowrap">{{movie[0]+1}}</td>
+
+                  <td nowrap="nowrap">
+                    <a href="{{movie[2]}}" target="_blank">
+                      {{movie[1]}}
+                        </a>
+                  </td>
+                  <td nowrap="nowrap">
+                    <a href="{{movie[2]}}" target="_blank">
+                      {{movie[2]}}
+                        </a></td>
+                  <td nowrap="nowrap">
+                    <img  height=100 width=100 class="board-img" src="{{movie[3]}}">
+                  </td>
+                  <td nowrap="nowrap">{{movie[4]}}</td>
+                  <td nowrap="nowrap">{{movie[5]}}</td>
+                  <td nowrap="nowrap">{{movie[6]}}</td>
+              </tr>
+
+              {% endfor %}
+
+          </table>
+
+        </div>
+
+
+        <div class="page" style="max-width: 100%">
+			<ul style="max-width: 100%">
+				<li class="prev"><a id="uppage" href="" >上一页</a></li>
+				<li><a id="page_1" href="?offset=0">1</a></li>
+				<li><a id="page_2" href="?offset=10">2</a></li>
+				<li><a id="page_3" href="?offset=20">3</a></li>
+				<li><a id="page_4" href="?offset=30">4</a></li>
+				<li><a id="page_5" href="?offset=40">5</a></li>
+				<li><a id="page_6" href="?offset=50">6</a></li>
+				<li><a id="page_7" href="?offset=60">7</a></li>
+				<li><a id="page_8" href="?offset=70">8</a></li>
+				<li><a id="page_9" href="?offset=80">9</a></li>
+				<li><a id="page_10" href="?offset=90">10</a></li>
+				<li class="next"><a id="downpage" href="">下一页</a></li>
+			</ul>
+		</div>
+    </section><!-- End Counts Section -->
+      </div>
+    </section><!-- End Our Team Section -->
+
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+
+    <div class="container">
+      <div class="copyright">
+        &copy; Copyright <strong><span>电影信息展示台</span></strong>. All Rights Reserved
+      </div>
+      <div class="credits">
+        <!-- All the links in the footer should remain intact. -->
+        <!-- You can delete the links only if you purchased the pro version. -->
+        <!-- Licensing information: https://bootstrapmade.com/license/ -->
+        <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/mamba-one-page-bootstrap-template-free/ -->
+        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+      </div>
+    </div>
+  </footer><!-- End Footer -->
+
+  <a href="#" class="back-to-top"><i class="icofont-simple-up"></i></a>
+
+  <!-- page js script -->
+  <script type="text/javascript">
+         var page = location.search.substr(1).split('=')[1]
+         if (isNaN(page))
+         {
+            page=0
+         }
+         if (parseInt(page)!=0)
+         {
+            page=parseInt(page)-10
+         }
+         document.getElementById("uppage").href="?offset="+page+""
+
+   </script>
+   <script type="text/javascript">
+         var page = location.search.substr(1).split('=')[1]
+         if (isNaN(page))
+         {
+            page=10
+         }
+		 page=parseInt(page)+10
+         document.getElementById("downpage").href="?offset="+page+""
+
+   </script>
+   <script>
+        var page_num = location.search.substr(1).split('=')[1] /10
+        if (isNaN(page_num))
+         {
+            page_num=1
+         }else
+         {
+            page_num=page_num+1
+         }
+        var page_id="page_"+page_num
+        document.getElementById(page_id).setAttribute('class','active')
+   </script>
+  <!-- Vendor JS Files -->
+  <script src="static/assets/vendor/jquery/jquery.min.js"></script>
+  <script src="static/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="static/assets/vendor/jquery.easing/jquery.easing.min.js"></script>
+  <script src="static/assets/vendor/php-email-form/validate.js"></script>
+  <script src="static/assets/vendor/jquery-sticky/jquery.sticky.js"></script>
+  <script src="static/assets/vendor/venobox/venobox.min.js"></script>
+  <script src="static/assets/vendor/waypoints/jquery.waypoints.min.js"></script>
+  <script src="static/assets/vendor/counterup/counterup.min.js"></script>
+  <script src="static/assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="static/assets/vendor/aos/aos.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="static/assets/js/main.js"></script>
+
+</body>
+
+</html>
