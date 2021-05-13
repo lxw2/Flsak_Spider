@@ -34,8 +34,8 @@ def maoyantop():
     print(offset)
     datalist = []
     conn = pymysql.connect(
-        host='118.31.174.144',  # host
-        port=3406,  # 默认端口，根据实际修改
+        host='xxx.xx.xxx.xxx',  # host
+        port=3306,  # 默认端口，根据实际修改
         user='root',  # 用户名
         passwd='123456',  # 密码
         db='luke_db',  # DB name
